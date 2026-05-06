@@ -1,9 +1,9 @@
 # One YouTube URL per line. Lines starting with # are ignored.
 # Add your team's links below — order determines sample_id (01, 02, ...).
 
-https://youtu.be/uf9IXSxPe_A
+https://youtu.be/uf9IXSxPe_A?si=D7yy95HjD9_TlHGa
 https://www.youtube.com/watch?v=KU18bBqgbmk
-https://youtu.be/IDQo1oGFoAI
-https://youtu.be/ztNuvcdf22M
-https://youtu.be/hRRlV588bvg
-https://youtu.be/3gGEVgUOYlQ
+https://youtu.be/IDQo1oGFoAI?si=UR_PpelicgP8YuZ_
+https://youtu.be/ztNuvcdf22M?si=1eeBxxZHUay3kcUz
+https://youtu.be/hRRlV588bvg?si=1VLEt_aARLYju--w
+https://youtu.be/3gGEVgUOYlQ?si=52ueavcisV5gzpx2

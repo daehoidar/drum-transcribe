@@ -10,15 +10,17 @@
     <pageOddTopMargin>0.4</pageOddTopMargin>
     <pageEvenBottomMargin>0.4</pageEvenBottomMargin>
     <pageOddBottomMargin>0.4</pageOddBottomMargin>
-    <staffUpperBorder>3</staffUpperBorder>
-    <staffLowerBorder>3</staffLowerBorder>
-    <staffDistance>4</staffDistance>
-    <minSystemDistance>4</minSystemDistance>
-    <maxSystemDistance>6</maxSystemDistance>
+    <staffUpperBorder>2</staffUpperBorder>
+    <staffLowerBorder>2</staffLowerBorder>
+    <staffDistance>3</staffDistance>
+    <minSystemDistance>3</minSystemDistance>
+    <maxSystemDistance>3</maxSystemDistance>
+    <enableVerticalSpread>0</enableVerticalSpread>
+    <lastSystemFillLimit>0</lastSystemFillLimit>
     <lyricsMinTopDistance>1</lyricsMinTopDistance>
     <Spatium>1.4</Spatium>
-    <minMeasureWidth>4</minMeasureWidth>
-    <measureSpacing>1.2</measureSpacing>
+    <minMeasureWidth>3</minMeasureWidth>
+    <measureSpacing>1.1</measureSpacing>
     <hideEmptyStaves>0</hideEmptyStaves>
     <createMultiMeasureRests>0</createMultiMeasureRests>
   </Style>

@@ -130,8 +130,12 @@ def style_args(mscore_dir: Path) -> list[str]:
 
 
 def add_system_breaks(musicxml: Path, measures_per_system: int = 4) -> None:
-    """Insert <print new-system="yes"/> every N measures so MuseScore's renderer
-    uses a predictable layout instead of pushing dense sections to new pages."""
+    """Force a predictable layout: strip every break MuseScore inserted on its
+    own, then add <print new-system="yes"/> every N measures.
+
+    Without the strip step, MuseScore's auto-inserted page/system breaks (often
+    at odd measures like 78 or 83) leave sparse pages even after our breaks.
+    """
     import xml.etree.ElementTree as ET
 
     ET.register_namespace("", "")
@@ -141,7 +145,14 @@ def add_system_breaks(musicxml: Path, measures_per_system: int = 4) -> None:
     for part in root.findall("part"):
         measures = part.findall("measure")
         for i, m in enumerate(measures):
-            # Break before every Nth measure (skipping the first one)
+            # 1. Remove pre-existing system/page break attributes from any
+            #    <print> element MuseScore inserted in this measure.
+            for pr in m.findall("print"):
+                for attr in ("new-system", "new-page"):
+                    if attr in pr.attrib:
+                        del pr.attrib[attr]
+
+            # 2. Inject our own system break at every Nth measure (skip first).
             if i == 0 or i % measures_per_system != 0:
                 continue
             existing = m.find("print")
