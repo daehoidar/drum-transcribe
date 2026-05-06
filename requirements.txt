@@ -1,0 +1,3 @@
+adtof-pytorch @ git+https://github.com/xavriley/ADTOF-pytorch.git
+pretty_midi
+yt-dlp
